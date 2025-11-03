@@ -43,9 +43,6 @@ def report(word, function, function_name):
 # The returned list should be sorted by in order of increasing length.
 
 def sorted_valid_passwords(passwords):
-    return sorted(
-        filter(lambda p: any(not ch.isalpha() for ch in p), passwords),
-        key=len
-    )
+    return sorted(list(filter(lambda x: not x.isalpha(), passwords)), key=len)
 
 
